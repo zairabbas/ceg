@@ -1,11 +1,9 @@
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "gatsby"
 import cn from "classnames";
 
 import useOnScreen from "../hooks/useOnScreen";
-import useLocoScroll from "../hooks/useLocoScroll";
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -23,30 +21,6 @@ const IndexPage = () =>
   }, [onScreen]);
 
   useEffect(() => {
-
-	gsap.registerPlugin(ScrollTrigger);
-	var sec = document.querySelectorAll('#about')
-	function imgins() {
-		sec.forEach((sec, i) => { 
-				let tl = gsap.timeline({
-				scrollTrigger: {
-					trigger: '#about',
-					scroller: useLocoScroll,
-					start: "top top",
-					end: "+=200",
-					markers: true,
-				}
-			});
-			tl.from(sec.querySelectorAll('.slideup-a'), {
-				opacity:0, duration: 1, y:30, stagger: 0.6,
-			  }) 
-			  .to(sec.querySelectorAll('.slideup-a'), {
-				opacity:1, duration: 1, y:1, stagger: 0.6, ease: "Power2.easeInOut",
-			  }) 
-	  });
-	}
-	imgins();
-	
 	
     if (reveal) {
 		gsap.set("body", { opacity: 0});
