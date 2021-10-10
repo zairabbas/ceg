@@ -1,4 +1,4 @@
-function appInit() {
+/*function appInit() {
   gsap.to('.slideup-h'),1,{y:0, opacity:1, stagger: 0.6, ease: Power3.inOut, duration:1}; 
   gsap.to('.slideup-h'),1,{opacity:0, y:40, stagger: 0.6, ease: Expo.easeInOut, delay:4};
   gsap.to('.preloader'),1,{scaleY:0, delay:6, ease:Expo.easeInOut, onComplete:function(){
@@ -49,7 +49,7 @@ function allani() {
           opacity:1, duration: 1, y:1, stagger: 0.6, ease: "Power2.easeInOut"
         }) 
   });
-}
+}*/
 
 $(document).ready(function(){
   $( window ).load(function() {  
